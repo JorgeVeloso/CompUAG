@@ -45,29 +45,93 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    TYPE = 258,
-    INT = 259,
-    FLOAT = 260,
-    PRINT = 261,
-    NUMBER = 262,
-    ID = 263,
-    EXPR = 264,
-    ATTR = 265,
-    ADD = 266,
-    SUB = 267
+    WHILE = 258,
+    IF = 259,
+    THEN = 260,
+    ELSE = 261,
+    READ = 262,
+    LET = 263,
+    NEXT = 264,
+    TYPE = 265,
+    PRINT = 266,
+    NUMBER = 267,
+    ID = 268,
+    EXPR_ARIT = 269,
+    EXPR_REL = 270,
+    ATTR = 271,
+    DIM = 272,
+    AS = 273,
+    SUB = 274,
+    STRING = 275,
+    BREAK = 276,
+    OPLOG = 277,
+    OPREL = 278,
+    DECL = 279,
+    RETURN = 280,
+    NEW = 281,
+    FLOATING = 282,
+    INTEGER = 283,
+    FLOAT = 284,
+    ARRAY = 285,
+    MODULE = 286,
+    MAIS = 287,
+    MENUS = 288,
+    MULT = 289,
+    DIV = 290,
+    MOD = 291,
+    AND = 292,
+    OR = 293,
+    NOT = 294,
+    LT = 295,
+    GT = 296,
+    GE = 297,
+    LE = 298,
+    NE = 299
   };
 #endif
 /* Tokens.  */
-#define TYPE 258
-#define INT 259
-#define FLOAT 260
-#define PRINT 261
-#define NUMBER 262
-#define ID 263
-#define EXPR 264
-#define ATTR 265
-#define ADD 266
-#define SUB 267
+#define WHILE 258
+#define IF 259
+#define THEN 260
+#define ELSE 261
+#define READ 262
+#define LET 263
+#define NEXT 264
+#define TYPE 265
+#define PRINT 266
+#define NUMBER 267
+#define ID 268
+#define EXPR_ARIT 269
+#define EXPR_REL 270
+#define ATTR 271
+#define DIM 272
+#define AS 273
+#define SUB 274
+#define STRING 275
+#define BREAK 276
+#define OPLOG 277
+#define OPREL 278
+#define DECL 279
+#define RETURN 280
+#define NEW 281
+#define FLOATING 282
+#define INTEGER 283
+#define FLOAT 284
+#define ARRAY 285
+#define MODULE 286
+#define MAIS 287
+#define MENUS 288
+#define MULT 289
+#define DIV 290
+#define MOD 291
+#define AND 292
+#define OR 293
+#define NOT 294
+#define LT 295
+#define GT 296
+#define GE 297
+#define LE 298
+#define NE 299
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

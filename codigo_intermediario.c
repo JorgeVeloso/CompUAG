@@ -13,11 +13,10 @@ char * gerar_temp() {
 	return strdup(buffer);
 }
 
-
 void gerar_codigo(no_arvore * raiz) {
 	if(raiz != NULL) {
 		switch(raiz->tipo) {
-			case EXPR: 
+			case EXPR_ARIT: 
 				gerar_codigo_expr(raiz);
 				break;
 			case ATTR:

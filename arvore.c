@@ -3,10 +3,10 @@
 #include "arvore.h"
 #include "y.tab.h"
 
-//espressao
+//NO PARA EXPRESSAO
 no_arvore * criar_no_expressao(int op, void *dir, void *esq) {
 	no_arvore *novo = (no_arvore *)  malloc(sizeof(no_arvore));
-	novo->tipo = EXPR;
+	novo->tipo = EXPR_ARIT;
 	novo->dado.expr =  criar_expressao(op, dir, esq);
 	return novo;
 }
@@ -18,17 +18,17 @@ t_expr * criar_expressao(int op, void *dir, void *esq) {
 	novo->esq = esq;
 	return novo;
 }
-//atribuicao
+//NO PARA ATRIBUICAO
 no_arvore * criar_no_atribuicao(simbolo *resultado, void *expressao) {
 	no_arvore *novo = (no_arvore *)  malloc(sizeof(no_arvore));
 	novo->tipo = ATTR;
 	novo->dado.attr =  criar_atribuicao(resultado, expressao);
 	return novo;
 }
-
 t_attr * criar_atribuicao(simbolo *resultado, void *expressao){ 
 	t_attr * novo = (t_attr *) malloc(sizeof(t_attr));
 	novo->resultado = resultado;
 	novo->expressao = expressao;
 	return novo;
+
 }

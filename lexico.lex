@@ -5,21 +5,31 @@ void yyerror(char *);
 %}
 
 letra	[a-z|A-Z|_] 
-numero	[0-9]
-float {numero}+(\.{numero}+)?(E[+-]?{numero}+)?
-identificador	{letra}({letra}|{numero})*
+integer	[0-9]
+float {integer}+(\.{integer}+)?(E[+-]?{integer}+)?
+identificador	{letra}({letra}|{integer})*
+string "{identificador}"
+boolean [true|false]
+and	"and"
+or	"or"
+not	"not"
+if	"if"
+else 	"else"
+for 	"for"
+OPREL 	"="|"<>"|"<"|">"|">="|"<="
+OPLOG	"and"|"or"|"not"
 
 %%
 
-{numero}+	{ yylval = atoi(yytext);
+{integer}+	{ yylval = atoi(yytext);
 		  return NUMBER;
 		}
 
 
-int		{	yylval = INT;
+"INTEGER"	{	yylval = INT;
 			return TYPE;
 		}
-float		{
+"FLOAT"		{
 			yylval = FLOAT;
 			return TYPE;
 		}
@@ -27,14 +37,12 @@ float		{
 PRINT		{	return PRINT; 
 		}
 
-{identificador}	{
+{identificador}+ {	printf("teste2");
 			yylval = strdup(yytext);
 			return ID;
 		}	
 
-[-+=(){};%]	{	return *yytext; }
-
-
+[-+=(){};%,]	{	return *yytext; }
 
 
 [ \t\n] 	; /* skip whitespace */

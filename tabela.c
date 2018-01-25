@@ -3,16 +3,12 @@
 #include "tabela.h"
 #include "y.tab.h"
 
-
-
-
 void inserir_simbolo(tabela *t, simbolo *s) {
 	no_tabela *no = (no_tabela *) malloc(sizeof(no_tabela));
 	no->dado = s;
 	no->proximo = t->primeiro;
 	t->primeiro = no;
 }
-
 
 simbolo * localizar_simbolo (tabela *contexto, char *lexema){
 	tabela *temp = contexto;
@@ -29,7 +25,6 @@ simbolo * localizar_simbolo (tabela *contexto, char *lexema){
 	}
 	return NULL;
 }
-
 
 simbolo *  criar_simbolo (char *lexema, int tipo) {
 	simbolo *novo = (simbolo *) malloc(sizeof(simbolo));
@@ -70,10 +65,14 @@ void imprimir_contexto(tabela *t) {
 	no_tabela * temp = t->primeiro;
 	printf("----------------------------------\n");
 	while(temp != NULL) {
-		if(temp->dado->tipo == INT) 
-			printf("\t INT: %s (%d)\n", temp->dado->lexema, temp->dado->val.dval);
+		if(temp->dado->tipo == INTEGER) 
+			printf("\t INTEGER: %s (%d)\n", temp->dado->lexema, temp->dado->val.dval);
+		
+		if(temp->dado->tipo == FLOAT) 
+			printf("\t FLOAT: %s (%f)\n", temp->dado->lexema, temp->dado->val.fval);
+
 		else
-			printf("\t FLOAT: %s (%d)\n", temp->dado->lexema, temp->dado->val.dval);	
+			printf("\t ARRAY: %s (%d)\n", temp->dado->lexema, temp->dado->val.dval);	
 		temp = temp->proximo;
 	}
 	printf("==================================\n");

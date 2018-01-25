@@ -11,11 +11,17 @@ a escolha de alguma linguagem no paradigma estruturado.
 3. A partir da linguagem escolhida, vocês devem especificar um subconjunto desta linguagem, 
 mantendo sos requisitos mínimos:
 
+
 a) Pelo menos dois tipos de dados (inteiro e ponto flutuante). Tipo string é opcional e vale ponto extra;
+
 
 b) Arrays;
 
+
+
 c) expressões aritméticas ( -, +, *, /, MOD), lógicas ( AND, OR e NOT) e relacionais ( Maior que, menor que, maior ou igual, menor ou igual, igual e diferente)
+
+
 
 d) precedência de operadores (verificar regras da linguagem) / utilização de parênteses para "alterar" a precedência;
 

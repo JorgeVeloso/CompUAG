@@ -1,0 +1,5 @@
+MODULE mainModule
+	SUB MAIN()
+		DIM x AS INTEGER
+	END SUB
+END MODULE	

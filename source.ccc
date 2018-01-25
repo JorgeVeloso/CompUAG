@@ -1,12 +1,16 @@
-{ 
-	int x; 
-	int y; 
-	{ 
-		float x; 
-	} 
-	{
-		int t;
-		{float _kkk; float j;}
-	}
+int soma (int a, int b) {
+	int c;
+	c = a + b;
 }
 
+
+int main(int argc, float argv) {
+	int a;
+	int b; 
+	int c;
+
+
+	a = 1;
+	b = 2;
+	c = soma(a, b+1);
+}
